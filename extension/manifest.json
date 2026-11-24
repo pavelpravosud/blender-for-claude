@@ -1,0 +1,15 @@
+{
+  "manifest_version": "0.2",
+  "name": "blender-py311",
+  "display_name": "Blender (Python 3.11)",
+  "version": "1.0.0",
+  "description": "Starts MCP for Blender from a private Python 3.11 environment, so it works on Windows PCs where the official extension fails (Python 3.15 / pywin32 error).",
+  "author": { "name": "Stravenford Academy" },
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": { "command": "node", "args": ["${__dirname}/server/index.js"] }
+  },
+  "compatibility": { "platforms": ["win32"] },
+  "license": "MIT"
+}
